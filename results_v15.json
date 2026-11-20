@@ -1,0 +1,58 @@
+[
+  {
+    "kind": "independent_blocks",
+    "block_size": 1,
+    "n": 100,
+    "row": 5,
+    "block": 5
+  },
+  {
+    "kind": "independent_blocks",
+    "block_size": 4,
+    "n": 100,
+    "row": 19,
+    "block": 5
+  },
+  {
+    "kind": "independent_blocks",
+    "block_size": 8,
+    "n": 100,
+    "row": 33,
+    "block": 5
+  },
+  {
+    "kind": "independent_blocks",
+    "block_size": 16,
+    "n": 100,
+    "row": 42,
+    "block": 5
+  },
+  {
+    "kind": "affine_burst",
+    "block_size": 1,
+    "n": 100,
+    "row": 100,
+    "block": 100
+  },
+  {
+    "kind": "affine_burst",
+    "block_size": 4,
+    "n": 100,
+    "row": 100,
+    "block": 100
+  },
+  {
+    "kind": "affine_burst",
+    "block_size": 8,
+    "n": 100,
+    "row": 100,
+    "block": 100
+  },
+  {
+    "kind": "affine_burst",
+    "block_size": 16,
+    "n": 100,
+    "row": 100,
+    "block": 100
+  }
+]
