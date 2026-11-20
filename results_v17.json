@@ -1,0 +1,37 @@
+[
+  {
+    "family": "short",
+    "n": 50,
+    "baseline": 0,
+    "new": 50,
+    "ambiguous": 50
+  },
+  {
+    "family": "long",
+    "n": 50,
+    "baseline": 0,
+    "new": 50,
+    "ambiguous": 50
+  },
+  {
+    "family": "little",
+    "n": 50,
+    "baseline": 0,
+    "new": 50,
+    "ambiguous": 0
+  },
+  {
+    "family": "null",
+    "n": 50,
+    "baseline": 0,
+    "new": 0,
+    "ambiguous": 0
+  },
+  {
+    "family": "fixed",
+    "n": 50,
+    "baseline": 0,
+    "new": 0,
+    "ambiguous": 0
+  }
+]
