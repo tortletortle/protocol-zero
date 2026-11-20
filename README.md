@@ -21,3 +21,14 @@ python experiments/crc_exploratory.py
 ```
 
 See [V0.2.3 report](docs/V0.2.3_REPORT.md). V0.2.2 streaming pipeline remains unchanged.
+
+## V0.2.4 — joint framing and unknown CRC
+
+```bash
+python -m unittest discover -s tests -v
+python experiments/joint_crc_benchmark.py
+python experiments/joint_crc_stress.py
+python -m protocol_zero.joint_crc --train train.bin --validation val.bin --test test.bin --out result.json
+```
+
+Offline analysis only. See [V0.2.4 report](docs/V0.2.4_REPORT.md). Agreed and contested spans are hypotheses, not verified ground truth. Synthetic validation only.

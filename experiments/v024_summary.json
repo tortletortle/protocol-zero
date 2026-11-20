@@ -1,0 +1,101 @@
+{
+  "preset": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 1.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.080974,
+    "new_seconds": 0.06091
+  },
+  "unknown": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.080477,
+    "new_seconds": 0.048777
+  },
+  "noise": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.07587,
+    "new_seconds": 0.050973
+  },
+  "wide": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.19557,
+    "new_seconds": 0.201457
+  },
+  "suffix": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 0.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.079474,
+    "new_seconds": 0.049356
+  },
+  "outside": {
+    "n": 12,
+    "accepted": 0,
+    "true_retained": 0,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 0.0,
+    "possible_recall": 0.0,
+    "old_seconds": 0.082948,
+    "new_seconds": 0.047434
+  },
+  "unique_lengths": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.091815,
+    "new_seconds": 0.05294
+  },
+  "fixed": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.074566,
+    "new_seconds": 0.131047
+  },
+  "decoys": {
+    "n": 12,
+    "accepted": 12,
+    "true_retained": 12,
+    "false_agreed": 0,
+    "old_f1": 0.0,
+    "new_f1": 1.0,
+    "possible_recall": 1.0,
+    "old_seconds": 0.101828,
+    "new_seconds": 0.052314
+  }
+}
