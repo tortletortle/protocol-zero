@@ -4,7 +4,7 @@
 
 ## 当前完成度
 
-- 记录进度：V0.15，时序相关字段推断（模拟验证）
+- 记录进度：V0.16，自动节律诊断（模拟验证，探索性证据）
 - **未经验收功能不得标记为已完成。**
 
 ## 目标 / 架构 / 运行方式
@@ -13,7 +13,7 @@
 
 - 分帧与校验：`joint.py`、`calibration.py`、`crc_adapter.py`
 - 字段与歧义：`fields.py`、`ambiguity.py`、`dependency.py`
-- 关系推断：`relations.py`、`robust.py`、`adaptive.py`、`temporal.py`
+- 关系推断：`relations.py`、`robust.py`、`adaptive.py`、`temporal.py`、`cadence.py`
 
 运行（Python 3，无第三方依赖的 V0.15 实验）：
 
@@ -46,3 +46,7 @@ git push origin --tags
 ```
 
 不要用空骨架覆盖已有历史。
+
+## V0.16
+
+运行 `python -m unittest discover -q`（27项通过）及 `python evaluate_v16.py`。520组配对模拟实验：固定块320/320长度识别，160/160正对照正确候选检出，0/160负对照误报。200组压力测试中，弱马尔可夫3/40、16周期随机重复1/40出现错误检出。自相关仅扫描1–8阶，阈值为启发式；自动块长度并不证明块间可交换性，只输出探索性证据。种子跨条件复用。尚无真实采集、端到端集成或第三方基准验证。详见 `results_v16.json`。
