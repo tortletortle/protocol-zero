@@ -136,7 +136,7 @@ def _stats_from_raw(raw_streams: list[list[_RawCandidate]], checksum_name: str, 
 
 
 
-def infer_model(
+def rank_hypotheses(
     training_streams: list[bytes],
     validation_streams: list[bytes],
     *,
@@ -145,15 +145,15 @@ def infer_model(
     min_validation_coverage: float = 0.08,
     min_checksum_rate: float = 0.70,
     sync_limit: int = 8,
-) -> dict:
-    """Infer a sync/length/checksum model on training traces and gate on validation.
+) -> list:
+    """Enumerate all scored hypotheses passing the train and validation gates.
 
     The search deliberately supports a bounded family: 2-byte sync, 1/2-byte
     length, 0..2 fixed bytes between length and payload, one-byte trailer, and
     the checksum functions in checksums.CHECKSUMS. Unknown families abstain.
     """
     if not training_streams or not validation_streams:
-        return {"status": "insufficient_data", "model": None, "candidates": []}
+        return []
     syncs = _sync_candidates(training_streams, sync_limit)
     hypotheses = []
     for sync in syncs:
@@ -182,9 +182,29 @@ def infer_model(
                                 + 0.02 * train["count"]
                             )
                             hypotheses.append((score, model, train, val))
+    hypotheses.sort(key=lambda x: (-x[0], x[1].sync, x[1].length_offset, x[1].length_width, x[1].length_endian, x[1].payload_offset, x[1].checksum))
+    return hypotheses
+
+
+def infer_model(
+    training_streams: list[bytes],
+    validation_streams: list[bytes],
+    *,
+    min_train_frames: int = 5,
+    min_validation_frames: int = 4,
+    min_validation_coverage: float = 0.08,
+    min_checksum_rate: float = 0.70,
+    sync_limit: int = 8,
+) -> dict:
+    """Backward-compatible V0.2.1 single-model decision."""
+    if not training_streams or not validation_streams:
+        return {"status": "insufficient_data", "model": None, "candidates": []}
+    hypotheses = rank_hypotheses(training_streams, validation_streams,
+        min_train_frames=min_train_frames, min_validation_frames=min_validation_frames,
+        min_validation_coverage=min_validation_coverage, min_checksum_rate=min_checksum_rate,
+        sync_limit=sync_limit)
     if not hypotheses:
         return {"status": "rejected", "model": None, "candidates": []}
-    hypotheses.sort(key=lambda x: (-x[0], x[1].sync, x[1].length_offset, x[1].length_width, x[1].length_endian, x[1].payload_offset, x[1].checksum))
     # Collapse hypotheses that produce exactly the same validation boundaries.
     # Each structural/checksum combination is generated once. Keep all of them:
     # different models selecting the same boundaries can still be semantically
