@@ -1,0 +1,61 @@
+[
+  {
+    "mode": "aligned",
+    "n": 40,
+    "packet_exact": 40,
+    "both_reassembled": 40,
+    "true_rule": 40,
+    "unique_rule": 0,
+    "ambiguous": 40,
+    "true_boundaries": 40
+  },
+  {
+    "mode": "segmented",
+    "n": 40,
+    "packet_exact": 0,
+    "both_reassembled": 40,
+    "true_rule": 40,
+    "unique_rule": 0,
+    "ambiguous": 40,
+    "true_boundaries": 40
+  },
+  {
+    "mode": "retransmit",
+    "n": 40,
+    "packet_exact": 0,
+    "both_reassembled": 40,
+    "true_rule": 40,
+    "unique_rule": 0,
+    "ambiguous": 40,
+    "true_boundaries": 40
+  },
+  {
+    "mode": "wrap",
+    "n": 40,
+    "packet_exact": 0,
+    "both_reassembled": 40,
+    "true_rule": 40,
+    "unique_rule": 0,
+    "ambiguous": 40,
+    "true_boundaries": 40
+  },
+  {
+    "mode": "gap",
+    "n": 40,
+    "packet_exact": 0,
+    "both_reassembled": 0,
+    "correct_reject": 40
+  },
+  {
+    "mode": "conflict",
+    "n": 40,
+    "packet_exact": 0,
+    "both_reassembled": 0,
+    "correct_reject": 40
+  },
+  {
+    "mode": "random_null",
+    "n": 40,
+    "any_rule": 1
+  }
+]
