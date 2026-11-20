@@ -1,0 +1,22 @@
+{
+  "source": "https://github.com/jkobierczynski/conduitscope/blob/main/tests/sample_modbus.pcap",
+  "reported_blob_sha": "9b1eb770d9a7c4071f973e329fe5d568ae75c310",
+  "computed_blob_sha": "9b1eb770d9a7c4071f973e329fe5d568ae75c310",
+  "sha256": "20895004d0deacc4bf6b8342e45b094e8293dc77487ef6a2079ed7f69eb28b1d",
+  "bytes": 284,
+  "payload_lengths": [
+    12,
+    29,
+    9
+  ],
+  "spec_length_matches": [
+    true,
+    true,
+    true
+  ],
+  "inference": {
+    "status": "insufficient_variation",
+    "rules": []
+  },
+  "provenance": "third-party test fixture; not verified field capture"
+}
