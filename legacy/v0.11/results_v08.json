@@ -1,0 +1,411 @@
+{
+  "summary": {
+    "CRC-8/SMBUS": {
+      "old": 0,
+      "new": 1,
+      "f1": 1.0
+    },
+    "CRC-8/SAE-J1850": {
+      "old": 0,
+      "new": 1,
+      "f1": 1.0
+    },
+    "CRC-8/AUTOSAR": {
+      "old": 0,
+      "new": 1,
+      "f1": 1.0
+    },
+    "outside": {
+      "old": 0,
+      "new": 0,
+      "f1": 0.0
+    }
+  },
+  "rows": [
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 0,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 1,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 2,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 3,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 4,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 5,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 6,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 7,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 8,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 9,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 10,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SMBUS",
+      "seed": 11,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 0,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 1,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 2,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 3,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 4,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 5,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 6,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 7,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 8,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 9,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 10,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/SAE-J1850",
+      "seed": 11,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 0,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 1,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 2,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 3,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 4,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 5,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 6,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 7,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 8,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 9,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 10,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "CRC-8/AUTOSAR",
+      "seed": 11,
+      "old": false,
+      "new": true,
+      "crc_candidates": 1,
+      "f1": 1.0
+    },
+    {
+      "kind": "outside",
+      "seed": 0,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 1,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 2,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 3,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 4,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 5,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 6,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 7,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 8,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 9,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 10,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    },
+    {
+      "kind": "outside",
+      "seed": 11,
+      "old": false,
+      "new": false,
+      "crc_candidates": 0,
+      "f1": 0.0
+    }
+  ],
+  "reveng_available": false
+}
