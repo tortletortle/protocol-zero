@@ -1,0 +1,122 @@
+[
+  {
+    "noise": 0,
+    "kind": "affine",
+    "exact": 100,
+    "robust": 100,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0,
+    "kind": "xor",
+    "exact": 100,
+    "robust": 100,
+    "multiple": 1,
+    "n": 100
+  },
+  {
+    "noise": 0,
+    "kind": "null",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.05,
+    "kind": "affine",
+    "exact": 1,
+    "robust": 100,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.05,
+    "kind": "xor",
+    "exact": 1,
+    "robust": 100,
+    "multiple": 1,
+    "n": 100
+  },
+  {
+    "noise": 0.05,
+    "kind": "null",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.1,
+    "kind": "affine",
+    "exact": 0,
+    "robust": 99,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.1,
+    "kind": "xor",
+    "exact": 0,
+    "robust": 99,
+    "multiple": 1,
+    "n": 100
+  },
+  {
+    "noise": 0.1,
+    "kind": "null",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.2,
+    "kind": "affine",
+    "exact": 0,
+    "robust": 27,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.2,
+    "kind": "xor",
+    "exact": 0,
+    "robust": 27,
+    "multiple": 1,
+    "n": 100
+  },
+  {
+    "noise": 0.2,
+    "kind": "null",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.3,
+    "kind": "affine",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.3,
+    "kind": "xor",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  },
+  {
+    "noise": 0.3,
+    "kind": "null",
+    "exact": 0,
+    "robust": 0,
+    "multiple": 0,
+    "n": 100
+  }
+]
