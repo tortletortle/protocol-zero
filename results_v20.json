@@ -1,0 +1,29 @@
+[
+  {
+    "kind": "SUM8",
+    "n": 40,
+    "correct_unique_boundaries": 40,
+    "verified": 40,
+    "unverified": 0,
+    "corruption_rejected": 40,
+    "truncation_rejected": 40
+  },
+  {
+    "kind": "CRC",
+    "n": 40,
+    "correct_unique_boundaries": 40,
+    "verified": 40,
+    "unverified": 0,
+    "corruption_rejected": 40,
+    "truncation_rejected": 40
+  },
+  {
+    "kind": "none",
+    "n": 40,
+    "correct_unique_boundaries": 40,
+    "verified": 0,
+    "unverified": 40,
+    "corruption_rejected": 0,
+    "truncation_rejected": 40
+  }
+]
