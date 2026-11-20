@@ -41,7 +41,6 @@ def run(n=30):
         out.append(dict(kind=kind,n=n,**count))
     return out
 
-
 def aliases(n=40):
     from evaluate_v18 import sample as old_sample
     from stream_reassembly import streams
