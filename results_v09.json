@@ -1,0 +1,5090 @@
+{
+  "summary": {
+    "byte": {
+      "exact": 1,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": 1
+    },
+    "little": {
+      "exact": 1,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": 1
+    },
+    "big": {
+      "exact": 1,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": 1
+    },
+    "no_wrap": {
+      "exact": 0,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": 1
+    }
+  },
+  "rows": [
+    {
+      "kind": "byte",
+      "seed": 0,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 1,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 2,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 3,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 4,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 5,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 6,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 7,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 8,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 9,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 10,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 11,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 12,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 13,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 14,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 15,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 16,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 17,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 18,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "byte",
+      "seed": 19,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 1.0,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 0,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 1,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 2,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 3,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 4,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 5,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 6,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 7,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 8,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 9,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 10,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 11,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 12,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 13,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 14,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 15,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 16,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 17,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 18,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "little",
+      "seed": 19,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 0,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 1,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 2,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 3,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 4,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 5,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 6,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 7,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 8,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 9,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 10,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 11,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 12,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 13,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 14,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 15,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 16,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 17,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 18,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "big",
+      "seed": 19,
+      "exact": true,
+      "f1": 1.0,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2big"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 0,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 1,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 2,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 3,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 4,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 5,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 6,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 7,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 8,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 9,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 10,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 11,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 12,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 13,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 14,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 15,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 16,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 17,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 18,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    },
+    {
+      "kind": "no_wrap",
+      "seed": 19,
+      "exact": false,
+      "f1": 0.7272727272727273,
+      "baseline": 0.6,
+      "framing": true,
+      "prediction": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          4,
+          "counter1little"
+        ],
+        [
+          4,
+          5,
+          "constant"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ],
+      "truth": [
+        [
+          0,
+          2,
+          "constant"
+        ],
+        [
+          2,
+          3,
+          "length"
+        ],
+        [
+          3,
+          5,
+          "counter2little"
+        ],
+        [
+          5,
+          -1,
+          "unknown"
+        ],
+        [
+          -1,
+          0,
+          "checksum_candidate"
+        ]
+      ]
+    }
+  ]
+}
