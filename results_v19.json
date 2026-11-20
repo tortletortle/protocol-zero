@@ -1,0 +1,67 @@
+[
+  {
+    "kind": "SUM8",
+    "n": 30,
+    "raw_multiple": 1,
+    "boundary_multiple": 1,
+    "selected_multiple": 0,
+    "any_candidate": 30,
+    "checksum_supported": 30,
+    "correct_test_candidate": 30,
+    "all_test_correct": 30,
+    "true_checksum": 30
+  },
+  {
+    "kind": "XOR8",
+    "n": 30,
+    "raw_multiple": 1,
+    "boundary_multiple": 1,
+    "selected_multiple": 0,
+    "any_candidate": 30,
+    "checksum_supported": 30,
+    "correct_test_candidate": 30,
+    "all_test_correct": 30,
+    "true_checksum": 30
+  },
+  {
+    "kind": "CRC-8/SMBUS",
+    "n": 30,
+    "raw_multiple": 1,
+    "boundary_multiple": 1,
+    "selected_multiple": 0,
+    "any_candidate": 30,
+    "checksum_supported": 30,
+    "correct_test_candidate": 30,
+    "all_test_correct": 30,
+    "true_checksum": 30
+  },
+  {
+    "kind": "no_checksum",
+    "n": 30,
+    "raw_multiple": 0,
+    "boundary_multiple": 0,
+    "selected_multiple": 0,
+    "any_candidate": 30,
+    "checksum_supported": 0,
+    "correct_test_candidate": 30,
+    "all_test_correct": 30,
+    "true_checksum": 0
+  },
+  {
+    "kind": "null",
+    "n": 30,
+    "raw_multiple": 0,
+    "boundary_multiple": 0,
+    "selected_multiple": 0,
+    "any_candidate": 0,
+    "checksum_supported": 0
+  },
+  {
+    "kind": "v18_aliases",
+    "n": 40,
+    "raw_multiple": 40,
+    "boundary_multiple": 1,
+    "checksum_supported": 0,
+    "all_test_correct": 39
+  }
+]
