@@ -148,7 +148,7 @@ def _stats(raw, model, total):
     return count,coverage,rate,tuple(spans),bodies
 
 
-def infer(train, validation, *, rate=.65, sync_limit=6, score_window=.15):
+def infer(train, validation, *, rate=.65, sync_limit=6, score_window=.15, solver=None):
     if not .5 < rate <= 1 or not 1 <= sync_limit <= 8 or score_window < 0:
         raise ValueError('invalid search thresholds')
     if not train or not validation:
@@ -159,7 +159,7 @@ def infer(train, validation, *, rate=.65, sync_limit=6, score_window=.15):
     passing=[]; scanned=0
     @lru_cache(maxsize=256)
     def solve(words):
-        return _fit(words,rate)
+        return (solver or _fit)(words,rate)
     for sync in _sync_candidates(train,sync_limit):
         for offset in range(2,6):
             for width,endian in ((1,'little'),(2,'little'),(2,'big')):

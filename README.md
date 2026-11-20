@@ -32,3 +32,15 @@ python -m protocol_zero.joint_crc --train train.bin --validation val.bin --test 
 ```
 
 Offline analysis only. See [V0.2.4 report](docs/V0.2.4_REPORT.md). Agreed and contested spans are hypotheses, not verified ground truth. Synthetic validation only.
+
+## V0.2.5 — robust maximum-consensus CRC
+
+`pip install -e '.[robust]'` enables the optional NumPy backend.
+
+```bash
+python -m unittest discover -s tests -v
+python experiments/robust_benchmark.py
+python -m protocol_zero.robust_crc --train train.bin --validation val.bin --test test.bin --out result.json
+```
+
+See [V0.2.5 report](docs/V0.2.5_REPORT.md). No automatic repair; synthetic validation only. Original solver remains available.
