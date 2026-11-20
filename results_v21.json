@@ -1,0 +1,45 @@
+{
+  "benchmark": {
+    "seeds": 40,
+    "positive_per_method": 800,
+    "negative_per_method": 800,
+    "methods": {
+      "prefix": {
+        "positive_accept": 0,
+        "negative_flag": 800,
+        "states_sum": 1832,
+        "depth2_selected": 0
+      },
+      "depth1": {
+        "positive_accept": 800,
+        "negative_flag": 0,
+        "states_sum": 280,
+        "depth2_selected": 0
+      },
+      "depth2": {
+        "positive_accept": 800,
+        "negative_flag": 800,
+        "states_sum": 440,
+        "depth2_selected": 40
+      },
+      "positive_only": {
+        "positive_accept": 800,
+        "negative_flag": 0,
+        "states_sum": 280,
+        "depth2_selected": 0
+      },
+      "labeled": {
+        "positive_accept": 800,
+        "negative_flag": 800,
+        "states_sum": 440,
+        "depth2_selected": 40
+      }
+    }
+  },
+  "integration": {
+    "exact_symbols": true,
+    "positive_accept": 20,
+    "negative_flag": 20,
+    "n_each": 20
+  }
+}
