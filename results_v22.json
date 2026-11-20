@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "clean",
+    "n": 40,
+    "positive_per_kind": 800,
+    "negative_per_kind": 800,
+    "any_candidate": 40,
+    "true_offset": 40,
+    "unique_true": 40,
+    "alias_present": 0,
+    "true_positive_accept": 800,
+    "true_negative_flag": 800
+  },
+  {
+    "kind": "alias",
+    "n": 40,
+    "positive_per_kind": 800,
+    "negative_per_kind": 800,
+    "any_candidate": 40,
+    "true_offset": 40,
+    "unique_true": 0,
+    "alias_present": 40,
+    "true_positive_accept": 800,
+    "true_negative_flag": 800,
+    "alias_positive_accept": 800,
+    "alias_negative_flag": 800
+  },
+  {
+    "kind": "shift",
+    "n": 40,
+    "positive_per_kind": 800,
+    "negative_per_kind": 800,
+    "any_candidate": 40,
+    "true_offset": 40,
+    "unique_true": 0,
+    "alias_present": 40,
+    "true_positive_accept": 800,
+    "true_negative_flag": 800,
+    "alias_positive_accept": 0,
+    "alias_negative_flag": 800
+  },
+  {
+    "kind": "null",
+    "n": 40,
+    "positive_per_kind": 800,
+    "negative_per_kind": 800,
+    "any_candidate": 0,
+    "true_offset": 0,
+    "unique_true": 0,
+    "alias_present": 0
+  }
+]
