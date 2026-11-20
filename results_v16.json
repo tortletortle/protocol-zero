@@ -1,0 +1,138 @@
+[
+  {
+    "kind": "null",
+    "size": 1,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 0,
+    "oracle_hits": 0,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "null",
+    "size": 3,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 0,
+    "oracle_hits": 0,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "null",
+    "size": 8,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 0,
+    "oracle_hits": 0,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "null",
+    "size": 16,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 0,
+    "oracle_hits": 0,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "signal",
+    "size": 1,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 40,
+    "oracle_hits": 40,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "signal",
+    "size": 3,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 40,
+    "oracle_hits": 40,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "signal",
+    "size": 8,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 40,
+    "oracle_hits": 40,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "signal",
+    "size": 16,
+    "n": 40,
+    "length_correct": 40,
+    "auto_hits": 40,
+    "oracle_hits": 40,
+    "statuses": {
+      "ok": 40
+    }
+  },
+  {
+    "kind": "markov",
+    "size": 1,
+    "n": 40,
+    "auto_hits": 0,
+    "statuses": {
+      "insufficient_changes": 30,
+      "unresolved_dependence": 10
+    }
+  },
+  {
+    "kind": "weak_markov",
+    "size": 1,
+    "n": 40,
+    "auto_hits": 3,
+    "statuses": {
+      "ok": 28,
+      "unresolved_dependence": 12
+    }
+  },
+  {
+    "kind": "irregular",
+    "size": 1,
+    "n": 40,
+    "auto_hits": 0,
+    "statuses": {
+      "unresolved_dependence": 40
+    }
+  },
+  {
+    "kind": "cycle",
+    "size": 1,
+    "n": 40,
+    "auto_hits": 0,
+    "statuses": {
+      "unresolved_dependence": 40
+    }
+  },
+  {
+    "kind": "lag16",
+    "size": 1,
+    "n": 40,
+    "auto_hits": 1,
+    "statuses": {
+      "unresolved_dependence": 27,
+      "ok": 13
+    }
+  }
+]
