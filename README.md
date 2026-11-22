@@ -1,4 +1,4 @@
-# PROTOCOL ZERO V0.2.2
+# PROTOCOL ZERO
 
 Research prototype: finite-observation equivalence, conservative frame consensus and length-only acquisition planning. Python 3.10+, standard library. The original V0.2.1 pipeline and tests remain available.
 
@@ -44,3 +44,13 @@ python -m protocol_zero.robust_crc --train train.bin --validation val.bin --test
 ```
 
 See [V0.2.5 report](docs/V0.2.5_REPORT.md). No automatic repair; synthetic validation only. Original solver remains available.
+
+
+## V0.2.6 — CRC collision limits and integrity evidence
+
+The V0.2.5 CRC consensus result is a candidate, not integrity proof. V0.2.6 adds a constructive same-bytes/different-histories collision witness and an audit wrapper that never promotes CRC/model agreement to integrity_verified.
+
+    python -m unittest discover -s tests -v
+    python experiments/integrity_collision.py --trials 50000 --seed 82607
+
+See docs/V0.2.6_REPORT.md. The 1/256 baseline applies only to one uniformly random independent candidate byte and one fixed CRC-8 model; it is not a calibrated false-acceptance rate for model search or real traffic. No real-device validation or automatic repair.

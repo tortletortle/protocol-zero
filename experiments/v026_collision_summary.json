@@ -1,0 +1,25 @@
+{
+  "trials": 50000,
+  "seed": 82607,
+  "uniform_random_padding_matches": 196,
+  "observed_rate": 0.00392,
+  "expected_uniform_rate": 0.00390625,
+  "expected_matches": 195.3125,
+  "constructive_witness": {
+    "observed_hex": "aa5504102001020304050708090a0b0c0d0e0f10b769",
+    "original_clean_frame_hex": "aa550410200102030405060708090a0b0c0d0e0f10b7",
+    "clean_alternative_frame_hex": "aa5504102001020304050708090a0b0c0d0e0f10b769",
+    "deleted_payload_index": 5,
+    "deleted_payload_byte": 6,
+    "original_crc": 183,
+    "interframe_padding": 105,
+    "original_clean_crc_valid": true,
+    "alternative_clean_crc_valid": true,
+    "same_observed_bytes": true,
+    "interpretations": {
+      "A": "original frame with one payload byte deleted, followed by one padding byte",
+      "B": "a different clean frame whose payload includes the shifted original CRC byte"
+    }
+  },
+  "scope": "one fixed known CRC-8 model and one candidate checksum byte; padding is independently uniform. This is not a false-acceptance estimate for model search, structured traffic, or real captures."
+}
