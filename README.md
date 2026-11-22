@@ -66,6 +66,6 @@ preserved and no candidate is promoted to integrity_verified.
     python experiments/evidence_fusion_demo.py
 
 See docs/V0.2.7_REPORT.md. Boundary absence is negative evidence only inside
-complete declared coverage. Provenance groups are user-declared; statistical
+complete declared coverage when complete=True; incomplete detectors leave missing positions unknown. Provenance groups are user-declared; statistical
 independence and source authenticity are not proven. Synthetic demonstration
 only; no real-device validation.
