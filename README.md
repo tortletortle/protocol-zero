@@ -54,3 +54,18 @@ The V0.2.5 CRC consensus result is a candidate, not integrity proof. V0.2.6 adds
     python experiments/integrity_collision.py --trials 50000 --seed 82607
 
 See docs/V0.2.6_REPORT.md. The 1/256 baseline applies only to one uniformly random independent candidate byte and one fixed CRC-8 model; it is not a calibrated false-acceptance rate for model search or real traffic. No real-device validation or automatic repair.
+
+
+## V0.2.7 — independent evidence fusion
+
+Added provenance-aware boundary and structural evidence evaluation. Evidence
+items sharing one declared origin group are counted once; conflicts are
+preserved and no candidate is promoted to integrity_verified.
+
+    python -m unittest discover -s tests -v
+    python experiments/evidence_fusion_demo.py
+
+See docs/V0.2.7_REPORT.md. Boundary absence is negative evidence only inside
+complete declared coverage. Provenance groups are user-declared; statistical
+independence and source authenticity are not proven. Synthetic demonstration
+only; no real-device validation.

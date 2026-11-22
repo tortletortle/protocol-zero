@@ -1,0 +1,17 @@
+{
+  "crc_model": {"poly": 7, "init": 0, "xorout": 0},
+  "original_payload_hex": "5041594c4f4144",
+  "deleted_payload_byte_hex": "44",
+  "original_crc_hex": "4e",
+  "padding_hex": "78",
+  "observed_stream_hex": "0000aa550307105041594c4f414e78ff",
+  "candidate_span": [2, 15],
+  "independently_observed_frame_end": 14,
+  "candidate_status": "conflicted",
+  "crc_model_consensus": true,
+  "supporting_independence_groups": ["capture-1", "protocol-spec-v1"],
+  "contradicted_independence_groups": ["logic-analyzer-1"],
+  "independent_support_count": 2,
+  "integrity_verified": false,
+  "scope": "deterministic synthetic mechanism test; not real-capture performance evidence"
+}
