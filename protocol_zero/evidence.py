@@ -30,6 +30,7 @@ class EvidenceSource:
     def __post_init__(self):
         _text(self.source_id, "source_id")
         _text(self.independence_group, "independence_group")
+        _text(self.kind, "kind")
         if self.kind not in KINDS:
             raise ValueError(f"unsupported source kind: {self.kind}")
         if not isinstance(self.description, str):
@@ -38,12 +39,13 @@ class EvidenceSource:
 
 @dataclass(frozen=True)
 class BoundarySeries:
-    """Complete boundary detections over inclusive byte-offset coverage."""
+    """Boundary detections over inclusive coverage; completeness controls negatives."""
     stream_id: str
     source_id: str
     covered_start: int
     covered_end: int
     boundaries: tuple[int, ...]
+    complete: bool = True
 
     def __post_init__(self):
         _text(self.stream_id, "stream_id")
@@ -52,6 +54,8 @@ class BoundarySeries:
         _int(self.covered_end, "covered_end")
         if self.covered_end < self.covered_start:
             raise ValueError("covered_end must be >= covered_start")
+        if type(self.complete) is not bool:
+            raise ValueError("complete must be a boolean")
         if tuple(sorted(set(self.boundaries))) != tuple(self.boundaries):
             raise ValueError("boundaries must be sorted and unique")
         for x in self.boundaries:
@@ -171,7 +175,9 @@ def _source_map(sources: Sequence[EvidenceSource]):
 def _edge(offset, series):
     if not series.covered_start <= offset <= series.covered_end:
         return "unknown"
-    return "supported" if offset in series.boundaries else "contradicted"
+    if offset in series.boundaries:
+        return "supported"
+    return "contradicted" if series.complete else "unknown"
 
 
 def _check_rule(rule, frame):
@@ -250,7 +256,7 @@ def evaluate_candidate(candidate: FrameCandidate, streams: Mapping[str, bytes],
             "family": "external_boundary", "source_id": source.source_id,
             "independence_group": source.independence_group, "status": status,
             "start_boundary": start_state, "end_boundary": end_state,
-            "detail": "positions checked against declared complete coverage",
+            "detail": "positions checked against declared coverage and completeness",
             "counts_as_integrity_proof": False,
         })
 

@@ -8,7 +8,6 @@ from protocol_zero.evidence import (
 
 class EvidenceFusionTests(unittest.TestCase):
     def setUp(self):
-        # Frame: sync(2), seq(1), payload_len(1), type(1), payload(7), CRC(1)
         self.frame = bytes([0xAA, 0x55, 0x03, 0x07, 0x10]) + b"PAYLOAD" + b"\x99"
         self.stream = b"\x00\x00" + self.frame + b"\xFF"
         self.start, self.end = 2, 2 + len(self.frame)
@@ -60,6 +59,15 @@ class EvidenceFusionTests(unittest.TestCase):
         self.assertEqual(r["candidate_status"], "single_source_supported")
         b = next(x for x in r["evidence"] if x["family"] == "external_boundary")
         self.assertEqual(b["end_boundary"], "unknown")
+
+    def test_incomplete_boundary_detector_absence_is_unknown(self):
+        incomplete = BoundarySeries("s0", "uart", 0, len(self.stream),
+                                    (self.start,), complete=False)
+        r = evaluate_candidate(self.candidate, {"s0": self.stream}, self.sources,
+                               [incomplete], [])
+        self.assertEqual(r["candidate_status"], "single_source_supported")
+        boundary = next(x for x in r["evidence"] if x["family"] == "external_boundary")
+        self.assertEqual(boundary["end_boundary"], "unknown")
 
     def test_structural_mismatch_is_conflict(self):
         wrong = [StructuralRule("wrong-type", "spec", 4, 1, expected_values=(0x11,))]
