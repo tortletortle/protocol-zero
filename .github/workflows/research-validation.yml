@@ -1,0 +1,29 @@
+name: protocol-zero-research-validation
+
+on:
+  push:
+    branches:
+      - main
+      - "research/**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install schema validator
+        run: python -m pip install "jsonschema>=4.22,<5"
+      - name: Run existing unit tests
+        run: python -m unittest discover -v
+      - name: Validate evidence bundle schema and references
+        run: python tools/validate_evidence_bundle.py
+      - name: Compile Python sources
+        run: python -m compileall -q .
