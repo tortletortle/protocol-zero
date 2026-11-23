@@ -134,7 +134,7 @@ def run_scenario(name, config, seed):
             reject_threshold=0.05,
             min_provenance_groups=2,
         )
-        plain = evaluate_hypothesis(observations, profiles, **kwargs)
+        plain = evaluate_hypothesis(observations, profiles, require_dependence_audit=False, **kwargs)
         audited = evaluate_hypothesis(
             observations, profiles, dependence_assessments=dependence,
             require_dependence_audit=True, **kwargs)
