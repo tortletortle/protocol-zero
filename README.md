@@ -45,48 +45,39 @@ python -m protocol_zero.robust_crc --train train.bin --validation val.bin --test
 
 See [V0.2.5 report](docs/V0.2.5_REPORT.md). No automatic repair; synthetic validation only. Original solver remains available.
 
-
 ## V0.2.6 — CRC collision limits and integrity evidence
 
-The V0.2.5 CRC consensus result is a candidate, not integrity proof. V0.2.6 adds a constructive same-bytes/different-histories collision witness and an audit wrapper that never promotes CRC/model agreement to integrity_verified.
+The V0.2.5 CRC consensus result is a candidate, not integrity proof. V0.2.6 adds a constructive same-bytes/different-histories collision witness and an audit wrapper that never promotes CRC/model agreement to `integrity_verified`.
 
     python -m unittest discover -s tests -v
     python experiments/integrity_collision.py --trials 50000 --seed 82607
 
 See docs/V0.2.6_REPORT.md. The 1/256 baseline applies only to one uniformly random independent candidate byte and one fixed CRC-8 model; it is not a calibrated false-acceptance rate for model search or real traffic. No real-device validation or automatic repair.
 
-
 ## V0.2.7 — independent evidence fusion
 
-Added provenance-aware boundary and structural evidence evaluation. Evidence
-items sharing one declared origin group are counted once; conflicts are
-preserved and no candidate is promoted to integrity_verified.
+Added provenance-aware boundary and structural evidence evaluation. Evidence items sharing one declared origin group are counted once; conflicts are preserved and no candidate is promoted to `integrity_verified`.
 
     python -m unittest discover -s tests -v
     python experiments/evidence_fusion_demo.py
 
-See docs/V0.2.7_REPORT.md. Boundary absence is negative evidence only inside
-complete declared coverage when complete=True; incomplete detectors leave missing positions unknown. Provenance groups are user-declared; statistical
-independence and source authenticity are not proven. Synthetic demonstration
-only; no real-device validation.
-
+See docs/V0.2.7_REPORT.md. Boundary absence is negative evidence only inside complete declared coverage when `complete=True`; incomplete detectors leave missing positions unknown. Provenance groups are user-declared; statistical independence and source authenticity are not proven. Synthetic demonstration only; no real-device validation.
 
 ## V0.2.8 — calibrated evidence and active abstention
 
-Adds labelled source-reliability calibration, sensitivity/specificity Wilson
-bounds with Bonferroni adjustment, likelihood-ratio fusion, environment
-matching, pairwise error-dependence auditing (required by default), and an
-explicit support / reject / abstain decision. It can convert V0.2.7 audit rows
-with observations_from_audit.
+Adds labelled source-reliability calibration, sensitivity/specificity Wilson bounds with Bonferroni adjustment, likelihood-ratio fusion, environment matching, pairwise error-dependence auditing (required by default), and an explicit support / reject / abstain decision. It can convert V0.2.7 audit rows with `observations_from_audit`.
 
     python -m pip install -e '.[robust]'
     python -m unittest discover -s tests -v
     python experiments/reliability_benchmark.py
 
-See docs/V0.2.8_REPORT.md and experiments/v028_reliability_benchmark.json.
-Calibration and evaluation IDs must differ. Environment IDs must match. One
-usable observation per declared provenance group is allowed. Pairwise
-dependence checks are approximate; no detected correlation is not proof of
-independence. Disabling the gate is only for controlled ablation. Hidden drift
-under a reused environment ID remains unresolved. Synthetic validation only;
-no real-device validation or integrity proof.
+See docs/V0.2.8_REPORT.md and experiments/v028_reliability_benchmark.json. Calibration and evaluation IDs must differ. Environment IDs must match. One usable observation per declared provenance group is allowed. Pairwise dependence checks are approximate; no detected correlation is not proof of independence. Disabling the gate is only for controlled ablation. Hidden drift under a reused environment ID remains unresolved. Synthetic validation only; no real-device validation or integrity proof.
+
+## V0.2.9 — labelled-feedback reliability drift monitoring
+
+Adds one-sided Bernoulli likelihood CUSUM, Page-Hinkley, and an ADWIN-inspired Hoeffding split-window baseline. `monitor_source` tracks false-negative and false-positive rates separately from externally labelled feedback, requires distinct calibration/evaluation IDs and a matching environment, and never updates calibration automatically.
+
+    python -m unittest discover -s tests -p 'test_drift.py' -v
+    python experiments/drift_benchmark.py
+
+See [V0.2.9 report](docs/V0.2.9_REPORT.md) and [benchmark results](experiments/v029_drift_benchmark.json). In 100-seed synthetic tests, the 2-of-3 alert rate was 0% under stationary IID errors and 100% under abrupt/gradual/temporary increases. A stationary autocorrelated null produced a 69% 2-of-3 alert rate, exposing a serious dependence failure. The window detector is ADWIN-inspired, not ADWIN; its correction is per scan, not time-uniform. Synthetic validation only; no real-device or field accuracy claim.
