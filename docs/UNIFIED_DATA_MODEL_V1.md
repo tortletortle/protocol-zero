@@ -54,7 +54,7 @@ Session 记录多个 flow/burst 的关联及顺序依据。方向、客户端/�
 
 对 TCP 而言，四元组不能唯一标识整个生命周期；需要 connection epoch，考虑 SYN、FIN、RST、序列号回绕、重用和时间边界。
 
-### 3.3 Message：字节片段和帧候选
+### 3.4 Message：字节片段和帧候选
 
 Message 是原始字节流中的一个区间或外部采集器给出的帧。
 - 使用半开区间 [start, end)；
@@ -64,7 +64,7 @@ Message 是原始字节流中的一个区间或外部采集器给出的帧。
 
 V0.29 的 FrameRecord 可以映射为 Message 的一个派生解码结果，但其 checksum_ok 不能直接变成独立 ground truth。
 
-### 3.4 Hypothesis：推断对象不是事实
+### 3.5 Hypothesis：推断对象不是事实
 
 每个 hypothesis 必须有：
 - 稳定 ID、类型、适用范围；
@@ -76,7 +76,7 @@ V0.29 的 FrameRecord 可以映射为 Message 的一个派生解码结果，但�
 
 禁止把任意 ranking score 叫作 probability。只有在独立标注校准集上完成校准，并记录 calibration_profile_id、校准环境和样本量时，才允许提供 calibrated_probability。
 
-### 3.5 FieldHypothesis：位置、编码和语义分离
+### 3.6 FieldHypothesis：位置、编码和语义分离
 
 位置统一使用 bit offset，避免 byte offset 与 bit offset 混淆：
 - start/end 都是半开范围；
@@ -91,7 +91,7 @@ V0.29 的 FrameRecord 可以映射为 Message 的一个派生解码结果，但�
 
 “2 字节小端计数器候选”不等于“设备转速”。
 
-### 3.6 RelationHypothesis：相关、约束与因果必须分级
+### 3.7 RelationHypothesis：相关、约束与因果必须分级
 
 关系至少记录：
 - operand hypothesis IDs；
@@ -101,7 +101,7 @@ V0.29 的 FrameRecord 可以映射为 Message 的一个派生解码结果，但�
 
 被动数据上的高相关性不能直接写成因果关系。只有受控干预或独立规范证据才能支持更强的 claim level。
 
-### 3.7 SemanticEvidence：必须有外部观测源
+### 3.8 SemanticEvidence：必须有外部观测源
 
 语义证据可以来自：
 - 设备日志；
@@ -113,7 +113,7 @@ V0.29 的 FrameRecord 可以映射为 Message 的一个派生解码结果，但�
 
 记录时间对齐方法、时钟偏差、滞后区间、观测误差和操作事件。仅有文件名“run/stop”只能算弱标签来源，不能直接成为字段真值。
 
-### 3.8 StateModel：未观测不等于非法
+### 3.9 StateModel：未观测不等于非法
 
 状态机输入符号来自已抽象消息类型、方向和字段谓词。模型需记录：
 - model family：DFA、Mealy、Moore、bounded-history 等；
