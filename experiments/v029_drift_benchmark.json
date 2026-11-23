@@ -1,0 +1,26 @@
+{
+  "experiment": "V0.2.9 labelled-feedback drift detection",
+  "seed_base": 29000,
+  "scenarios": [
+    {"scenario":"stationary_iid","seeds":100,"calibration_per_class":500,"evaluation_stream_length":2500,"change_at":null,"mean_smoothed_calibration_fnr":0.05099800399201597,"detector_alarm_rates":{"likelihood_cusum":0.01,"page_hinkley":0.0,"hoeffding_window":0.0},"any_detector_alarm_rate":0.01,"two_of_three_alert_rate":0.0,"pre_change_alarm_rate":null,"median_first_alarm_index":316,"median_two_of_three_alert_delay":null,"median_first_alarm_delay":null,"no_alarm_count":99,"paired_seeds":true},
+    {"scenario":"abrupt_increase","seeds":100,"calibration_per_class":500,"evaluation_stream_length":2500,"change_at":600,"mean_smoothed_calibration_fnr":0.05099800399201597,"detector_alarm_rates":{"likelihood_cusum":1.0,"page_hinkley":1.0,"hoeffding_window":1.0},"any_detector_alarm_rate":1.0,"two_of_three_alert_rate":1.0,"pre_change_alarm_rate":0.0,"median_first_alarm_index":652.0,"median_two_of_three_alert_delay":75.0,"median_first_alarm_delay":52.0,"no_alarm_count":0,"paired_seeds":true},
+    {"scenario":"gradual_increase","seeds":100,"calibration_per_class":500,"evaluation_stream_length":2500,"change_at":600,"mean_smoothed_calibration_fnr":0.05099800399201597,"detector_alarm_rates":{"likelihood_cusum":1.0,"page_hinkley":1.0,"hoeffding_window":0.95},"any_detector_alarm_rate":1.0,"two_of_three_alert_rate":1.0,"pre_change_alarm_rate":0.01,"median_first_alarm_index":1062.0,"median_two_of_three_alert_delay":576.5,"median_first_alarm_delay":464,"no_alarm_count":0,"paired_seeds":true},
+    {"scenario":"temporary_spike","seeds":100,"calibration_per_class":500,"evaluation_stream_length":2500,"change_at":600,"mean_smoothed_calibration_fnr":0.05099800399201597,"detector_alarm_rates":{"likelihood_cusum":1.0,"page_hinkley":1.0,"hoeffding_window":0.89},"any_detector_alarm_rate":1.0,"two_of_three_alert_rate":1.0,"pre_change_alarm_rate":0.0,"median_first_alarm_index":644.5,"median_two_of_three_alert_delay":66.5,"median_first_alarm_delay":44.5,"no_alarm_count":0,"paired_seeds":true},
+    {"scenario":"improvement","seeds":100,"calibration_per_class":500,"evaluation_stream_length":2500,"change_at":600,"mean_smoothed_calibration_fnr":0.05099800399201597,"detector_alarm_rates":{"likelihood_cusum":0.01,"page_hinkley":0.01,"hoeffding_window":0.0},"any_detector_alarm_rate":0.01,"two_of_three_alert_rate":0.01,"pre_change_alarm_rate":0.01,"median_first_alarm_index":570,"median_two_of_three_alert_delay":null,"median_first_alarm_delay":null,"no_alarm_count":99,"paired_seeds":true},
+    {"scenario":"stationary_autocorrelated","seeds":100,"calibration_per_class":500,"evaluation_stream_length":2500,"change_at":null,"mean_smoothed_calibration_fnr":0.05099800399201597,"detector_alarm_rates":{"likelihood_cusum":0.89,"page_hinkley":0.71,"hoeffding_window":0.0},"any_detector_alarm_rate":0.91,"two_of_three_alert_rate":0.69,"pre_change_alarm_rate":null,"median_first_alarm_index":573,"median_two_of_three_alert_delay":null,"median_first_alarm_delay":null,"no_alarm_count":9,"paired_seeds":true}
+  ],
+  "detector_parameters": {
+    "likelihood_cusum":{"target_increase":0.15,"threshold":9.0},
+    "page_hinkley":{"delta":0.02,"threshold":10.0},
+    "hoeffding_window":{"min_window":64,"max_window":2048,"delta_per_scan":0.01,"check_every":16},
+    "alert_policy":"two of three algorithms; algorithm agreement is not independent evidence"
+  },
+  "limitations": [
+    "All streams are synthetic Bernoulli or stationary two-state Markov processes.",
+    "Calibration and evaluation streams use separate random draws and identifiers.",
+    "Thresholds are fixed engineering settings, not universally calibrated operating points.",
+    "Hoeffding correction is per scan, not time-uniform across repeated scans.",
+    "CUSUM and Page-Hinkley assume weakly dependent observations; autocorrelation causes false alarms.",
+    "No alarm does not prove stable accuracy; no automatic recalibration, real capture or field validation."
+  ]
+}
