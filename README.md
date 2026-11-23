@@ -119,3 +119,20 @@ Key decision: start with an authorized PCAP/decoded-byte-stream vertical slice, 
 - [Machine-readable Evidence Bundle JSON Schema](schemas/protocol-zero-evidence-v1.schema.json)
 
 These are architecture artifacts only. No runtime modules have been migrated and no merge into main has been performed. V1 separates raw captures, derived messages, competing hypotheses, provenance, semantic evidence, state models, and held-out validation. Uncalibrated scores are not probabilities; unobserved state transitions are not treated as illegal.
+
+
+## Unified data model and adapters
+
+- [V0.22 ↔ V0.2.9 module mapping](docs/MODULE_MAP_V022_V029.md)
+- [Unified Evidence Bundle V1](docs/UNIFIED_DATA_MODEL_V1.md)
+- [V1 read-only adapter contract](docs/ADAPTER_CONTRACT_V1.md)
+- [JSON Schema](schemas/protocol-zero-evidence-v1.schema.json)
+- [Synthetic schema fixture](examples/evidence_bundle_v1_minimal.json)
+- [Schema and cross-reference validator](tools/validate_evidence_bundle.py)
+
+Validate locally after installing the optional development dependency:
+
+    python -m pip install "jsonschema>=4.22,<5"
+    python tools/validate_evidence_bundle.py
+
+The research-validation GitHub Actions workflow is configured, but this repository currently receives no hosted runner assignment (runner_id=0; no job steps executed). Therefore no CI test pass is claimed from that workflow yet. The schema structure and fixture references have been checked through the connected GitHub source inspection; a full JSON Schema runtime validation remains pending a working runner or local execution.
