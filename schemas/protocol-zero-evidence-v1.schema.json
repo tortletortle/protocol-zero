@@ -22,6 +22,10 @@
     "relation_hypotheses",
     "semantic_hypotheses",
     "state_models",
+    "calibration_profiles",
+    "dependence_audits",
+    "drift_assessments",
+    "repair_hypotheses",
     "validation_results"
   ],
   "properties": {
@@ -174,6 +178,30 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/messageFamily"
+      }
+    },
+    "calibration_profiles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/calibrationProfile"
+      }
+    },
+    "dependence_audits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dependenceAudit"
+      }
+    },
+    "drift_assessments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/driftAssessment"
+      }
+    },
+    "repair_hypotheses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/repairHypothesis"
       }
     }
   },
@@ -2004,6 +2032,298 @@
           }
         }
       ]
+    },
+    "calibrationProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile_id",
+        "source_id",
+        "independence_group",
+        "calibration_dataset_id",
+        "environment_id",
+        "true_positive",
+        "false_positive",
+        "true_negative",
+        "false_negative",
+        "min_per_class",
+        "calibrated"
+      ],
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "independence_group": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calibration_dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "true_positive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "false_positive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "true_negative": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "false_negative": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min_per_class": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "calibrated": {
+          "type": "boolean"
+        }
+      }
+    },
+    "dependenceAudit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "audit_id",
+        "source_a",
+        "source_b",
+        "calibration_dataset_id",
+        "environment_id",
+        "positive_examples",
+        "negative_examples",
+        "threshold",
+        "status",
+        "method"
+      ],
+      "properties": {
+        "audit_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_a": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_b": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calibration_dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "positive_error_phi": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -1,
+          "maximum": 1
+        },
+        "positive_error_interval": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "positive_examples": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "negative_error_phi": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -1,
+          "maximum": 1
+        },
+        "negative_error_interval": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "negative_examples": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "dependent",
+            "no_dependence_detected_within_scope",
+            "insufficient_data",
+            "abstain"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "driftAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assessment_id",
+        "source_id",
+        "calibration_profile_id",
+        "evaluation_dataset_id",
+        "environment_id",
+        "feedback_count",
+        "status",
+        "calibration_updated",
+        "integrity_verified"
+      ],
+      "properties": {
+        "assessment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calibration_profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evaluation_dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "feedback_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "class_results": {
+          "type": "object"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "drift_alert",
+            "single_method_warning",
+            "no_alarm_observed",
+            "abstain",
+            "insufficient_feedback"
+          ]
+        },
+        "calibration_updated": {
+          "const": false
+        },
+        "integrity_verified": {
+          "const": false
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "repairHypothesis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repair_id",
+        "original_message_id",
+        "reconstructed_sha256",
+        "operations",
+        "assumptions",
+        "status",
+        "score",
+        "evidence_ids",
+        "trusted_as_original"
+      ],
+      "properties": {
+        "repair_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "original_message_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reconstructed_sha256": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "minItems": 1
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "candidate",
+            "accepted_under_assumptions",
+            "rejected",
+            "abstained"
+          ]
+        },
+        "score": {
+          "$ref": "#/$defs/score"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "trusted_as_original": {
+          "const": false
+        }
+      }
     }
   }
 }
