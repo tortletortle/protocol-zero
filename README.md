@@ -110,3 +110,12 @@ This research branch adds a documented reuse and evaluation plan; it does not cl
 - [Blind benchmark and evaluation plan](docs/RESEARCH_BENCHMARK_PLAN_2026.md)
 
 Key decision: start with an authorized PCAP/decoded-byte-stream vertical slice, preserve competing hypotheses, add external evidence for physical semantics, and evaluate on device/protocol-disjoint holdouts. Do not merge the divergent V0.2.9 branch into main without an API and test mapping.
+
+
+## V0.22 / V0.2.9 consolidation research
+
+- [Module-by-module mapping and migration decisions](docs/MODULE_MAP_V022_V029.md)
+- [Unified evidence data model V1](docs/UNIFIED_DATA_MODEL_V1.md)
+- [Machine-readable Evidence Bundle JSON Schema](schemas/protocol-zero-evidence-v1.schema.json)
+
+These are architecture artifacts only. No runtime modules have been migrated and no merge into main has been performed. V1 separates raw captures, derived messages, competing hypotheses, provenance, semantic evidence, state models, and held-out validation. Uncalibrated scores are not probabilities; unobserved state transitions are not treated as illegal.
