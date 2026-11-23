@@ -45,6 +45,10 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
         "relation_hypotheses": "hypothesis_id",
         "semantic_hypotheses": "hypothesis_id",
         "state_models": "state_model_id",
+        "calibration_profiles": "profile_id",
+        "dependence_audits": "audit_id",
+        "drift_assessments": "assessment_id",
+        "repair_hypotheses": "repair_id",
         "validation_results": "validation_id",
     }
     for collection, key in keys.items():
@@ -139,6 +143,36 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
             for ref in transition.get("evidence_ids", []):
                 if ref not in evidence_ids:
                     errors.append(f"state model {model.get('state_model_id')} transition references unknown evidence")
+
+    for profile in bundle.get("calibration_profiles", []):
+        if profile.get("source_id") not in ids["sources"]:
+            errors.append(f"calibration profile {profile.get('profile_id')} references unknown source")
+
+    for audit in bundle.get("dependence_audits", []):
+        if audit.get("source_a") not in ids["sources"] or audit.get("source_b") not in ids["sources"]:
+            errors.append(f"dependence audit {audit.get('audit_id')} references unknown source")
+
+    for drift in bundle.get("drift_assessments", []):
+        if drift.get("source_id") not in ids["sources"]:
+            errors.append(f"drift assessment {drift.get('assessment_id')} references unknown source")
+        if drift.get("calibration_profile_id") not in ids["calibration_profiles"]:
+            errors.append(f"drift assessment {drift.get('assessment_id')} references unknown calibration profile")
+
+    for repair in bundle.get("repair_hypotheses", []):
+        if repair.get("original_message_id") not in ids["messages"]:
+            errors.append(f"repair hypothesis {repair.get('repair_id')} references unknown original message")
+        for ref in repair.get("evidence_ids", []):
+            if ref not in evidence_ids:
+                errors.append(f"repair hypothesis {repair.get('repair_id')} references unknown evidence {ref}")
+        if repair.get("trusted_as_original") is not False:
+            errors.append(f"repair hypothesis {repair.get('repair_id')} cannot be trusted as original")
+
+    for collection in ("frame_hypotheses", "field_hypotheses", "relation_hypotheses", "semantic_hypotheses", "repair_hypotheses"):
+        for item in bundle.get(collection, []):
+            score = item.get("score", {})
+            profile_id = score.get("calibration_profile_id")
+            if profile_id is not None and profile_id not in ids["calibration_profiles"]:
+                errors.append(f"{collection} item {item.get('hypothesis_id', item.get('repair_id'))} references unknown calibration profile")
 
     for result in bundle.get("validation_results", []):
         for ref in result.get("target_hypothesis_ids", []):
