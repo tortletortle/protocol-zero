@@ -136,6 +136,7 @@
       },
       "status": "candidate",
       "score": {
+        "status": "ranking_only",
         "method": "fixture-score",
         "value": 1,
         "scale": "raw_score",
@@ -175,9 +176,11 @@
       ],
       "status": "candidate",
       "score": {
+        "status": "ranking_only",
         "method": "fixture-score",
         "value": 1,
-        "scale": "raw_score"
+        "scale": "raw_score",
+        "higher_is_better": true
       },
       "support_evidence_ids": [
         "evidence-001"
