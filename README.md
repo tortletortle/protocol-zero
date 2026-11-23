@@ -100,3 +100,13 @@ python pz_cli.py decode protocol.json test.bin
 - `docs/V0.2.5_REPORT.md` — bounded CRC consensus and held-out validation report.
 - `experiments/v025_trials.csv` — paired and held-out trial records.
 - The complete V0.25 source package has not yet been migrated into the repository. Do not treat these research artifacts alone as proof that the V0.25 implementation is present or executable here.
+
+
+## 2026 architecture research
+
+This research branch adds a documented reuse and evaluation plan; it does not claim a new end-to-end reverse-engineering capability.
+
+- [Architecture and existing-tool reuse review](docs/RESEARCH_ARCHITECTURE_REUSE_2026.md)
+- [Blind benchmark and evaluation plan](docs/RESEARCH_BENCHMARK_PLAN_2026.md)
+
+Key decision: start with an authorized PCAP/decoded-byte-stream vertical slice, preserve competing hypotheses, add external evidence for physical semantics, and evaluate on device/protocol-disjoint holdouts. Do not merge the divergent V0.2.9 branch into main without an API and test mapping.
