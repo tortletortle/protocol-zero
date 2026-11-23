@@ -1132,7 +1132,8 @@
             "bitfield",
             "numeric",
             "timestamp",
-            "unknown"
+            "unknown",
+            "message_type"
           ]
         },
         "encoding_candidates": {
@@ -1859,6 +1860,150 @@
           "uniqueItems": true
         }
       }
+    },
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "method",
+        "value",
+        "scale"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "unscored",
+            "ranking_only",
+            "calibrated"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "scale": {
+          "type": "string",
+          "enum": [
+            "none",
+            "raw_score",
+            "log_likelihood",
+            "bits_per_event",
+            "normalized_score"
+          ]
+        },
+        "higher_is_better": {
+          "type": "boolean"
+        },
+        "calibrated_probability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "calibration_profile_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unscored"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "null"
+              },
+              "scale": {
+                "const": "none"
+              }
+            },
+            "not": {
+              "required": [
+                "calibrated_probability"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "ranking_only"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "scale": {
+                "enum": [
+                  "raw_score",
+                  "log_likelihood",
+                  "bits_per_event",
+                  "normalized_score"
+                ]
+              }
+            },
+            "not": {
+              "required": [
+                "calibrated_probability"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "calibrated"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "calibrated_probability",
+              "calibration_profile_id"
+            ],
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "scale": {
+                "enum": [
+                  "raw_score",
+                  "log_likelihood",
+                  "bits_per_event",
+                  "normalized_score"
+                ]
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
