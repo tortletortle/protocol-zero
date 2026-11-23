@@ -15,6 +15,7 @@
     "flows",
     "sessions",
     "messages",
+    "message_families",
     "evidence",
     "frame_hypotheses",
     "field_hypotheses",
@@ -168,6 +169,12 @@
     },
     "metadata": {
       "type": "object"
+    },
+    "message_families": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/messageFamily"
+      }
     }
   },
   "$defs": {
@@ -1774,6 +1781,78 @@
         },
         "notes": {
           "type": "string"
+        }
+      }
+    },
+    "messageFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "message_family_id",
+        "member_message_ids",
+        "discovery_method",
+        "status"
+      ],
+      "properties": {
+        "message_family_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "member_message_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "discovery_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "candidate",
+            "active",
+            "alternative",
+            "rejected",
+            "abstained",
+            "accepted_under_scope"
+          ]
+        },
+        "direction_pattern": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "a_to_b",
+              "b_to_a",
+              "inbound",
+              "outbound",
+              "unknown"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "cluster_metrics": {
+          "type": "object"
+        },
+        "support_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "contradiction_evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
         }
       }
     }
