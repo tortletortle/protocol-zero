@@ -31,6 +31,10 @@ V1 不允许通过简单字段重命名掩盖语义差异。
 - relation_hypotheses：字段间数学/时序关系；
 - semantic_hypotheses：字段与外部设备变量/操作的映射；
 - state_models：消息序列的状态/转移模型；
+- calibration_profiles：按独立标注集和环境校准的来源可靠性档案；
+- dependence_audits：来源错误相关性审计；
+- drift_assessments：有标签反馈上的漂移监测结果；
+- repair_hypotheses：与原始帧分离的修复候选；
 - validation_results：独立数据集上的验证结果。
 
 所有 ID 在 bundle 内唯一。跨 bundle 引用必须同时带 bundle ID，不能只依赖数组下标。
@@ -79,7 +83,7 @@ V0.29 的 FrameRecord 可以映射为 Message 的一个派生解码结果，但�
 - 竞争候选 ID；
 - 原始排序分数及其分数定义。
 
-禁止把任意 ranking score 叫作 probability。只有在独立标注校准集上完成校准，并记录 calibration_profile_id、校准环境和样本量时，才允许提供 calibrated_probability。
+禁止把任意 ranking score 叫作 probability。score.status 必须区分 unscored、ranking_only、calibrated。只有在独立标注校准集上完成校准，并记录 calibration_profile_id、校准环境和样本量时，才允许提供 calibrated_probability。没有可用分数的旧版候选应显式写成 unscored，而不是补造 0 分或伪概率。
 
 ### 3.6 FieldHypothesis：位置、编码和语义分离
 
@@ -136,11 +140,18 @@ V0.29 的 independence_group 是来源归组标签。V1 进一步记录 independ
 - audited：在指定校准/评估范围内完成依赖审计；
 - unknown：未知。
 
-即使状态为 audited，也必须保留审计数据集、环境、方法和时间范围。不得把一个已审计环境的独立性推广到其他设备或环境。
+即使状态为 audited，也必须保留审计数据集、环境、方法和时间范围。不得把一个已审计环境的独立性推广到其他设备或环境。CalibrationProfile、DependenceAudit、DriftAssessment 均是独立分析工件，不能折叠进单条帧或字段记录。
 
 同一原始 Capture 派生出的多个统计量通常共享来源，不能作为多份独立证据相乘。
 
-## 5. ValidationResult 与数据泄漏控制
+## 5. Calibration / Dependence / Drift / Repair 工件
+
+- CalibrationProfile 必须指向明确来源、校准数据集、环境以及 TP/FP/TN/FN 计数；校准是否充足由预设每类样本门槛决定。
+- DependenceAudit 记录来源对、校准集、环境、正负类样本数、误差相关系数和区间。未检测到相关不等于证明独立。
+- DriftAssessment 只消费独立标注的 (ground_truth, source_verdict) 反馈；不允许自动更新校准档案，也不能把 no_alarm 解释为完整性证明。
+- RepairHypothesis 必须记录原始 Message、重建哈希、编辑操作和前提假设，并强制 trusted_as_original=false。修复输出与原始观测永久分离。
+
+## 6. ValidationResult 与数据泄漏控制
 
 每次评估必须记录：
 - train/validation/test dataset IDs；
@@ -152,7 +163,7 @@ V0.29 的 independence_group 是来源归组标签。V1 进一步记录 independ
 
 packet 随机切分不能作为唯一泛化证据。同一设备/会话/操作轨迹跨训练与测试会导致泄漏风险。
 
-## 6. V0.22 / V0.2.9 适配关系
+## 7. V0.22 / V0.2.9 适配关系
 
 | 旧对象 | V1 对象 | 适配说明 |
 |---|---|---|
@@ -172,9 +183,9 @@ packet 随机切分不能作为唯一泛化证据。同一设备/会话/操作�
 | V0.29 ReliabilityProfile | Calibration artifact | 单独存储，不能嵌入单条 frame |
 | V0.29 PairwiseDependenceAssessment | DependenceAudit | 保留样本数、环境和置信区间 |
 | V0.29 Drift monitor output | DriftAssessment | 只消费有标签反馈，不自动更新 profile |
-| V0.29 repair hypotheses | RepairHypothesis | 独立于原始 Message，默认不进入可信解码 |
+| V0.29 repair hypotheses | RepairHypothesis | 独立于原始 Message，trusted_as_original 永远为 false，不进入可信解码 |
 
-## 7. 兼容策略
+## 8. 兼容策略
 
 1. 先实现 V0.22/V0.2.9 → V1 的只读导出 adapter。
 2. 运行 golden fixtures，比较候选数量、边界、字段和证据，不追求旧 JSON 文本逐字相同。
@@ -182,6 +193,6 @@ packet 随机切分不能作为唯一泛化证据。同一设备/会话/操作�
 4. 禁止在 adapter 中自动选择唯一模型，或把缺失信息填成默认真值。
 5. schema 版本升级使用显式 migration function，禁止静默改写历史实验记录。
 
-## 8. 当前状态
+## 9. 当前状态
 
 本文件定义 V1 对象契约；配套 JSON Schema 用于结构校验。尚未实现 Python runtime dataclasses、adapter、持久化层或前端 UI。下一步应先实现 schema validator 与两个只读 adapter，再进行跨分支 golden regression。
