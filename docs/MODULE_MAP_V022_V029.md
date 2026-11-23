@@ -145,3 +145,26 @@ repair.py 假设单帧间隔、头和校验尾部完整、最多一个 payload �
 V0.22 是数据接入、TCP 重组、关系推断与有界会话模型的主要积累；V0.2.9 是受限帧/CRC 联合推断、有限观测等价、证据溯源、校准和漂移监控的主要积累。
 
 二者应通过统一 schema 形成插件化协作，而不是整仓覆盖或简单合并。当前尚未迁移运行时代码，本文件是基于 Git 源码审查的整合设计。
+
+
+## 8. 集成状态审计：模块存在不等于主流水线调用
+
+这是本次审查中需要特别纠正的工程事实：两个版本都包含独立研究模块，但都不是“所有功能已经串联”的完整系统。
+
+### V0.22
+- 根目录 pipeline.py 直接调用 stream_framing、length_rules、evaluate_v08 的校验模型。
+- analyze_pcaps() 包装有限的 TCP 流重组入口。
+- message_types.py、session_model.py、relations.py、robust.py、adaptive.py、temporal.py、cadence.py 等并未由该 pipeline 自动串联。
+- 因此 README 中各模块的存在，不能被理解为原始 PCAP 到字段语义/状态机的端到端能力。
+
+### V0.2.9
+- protocol_zero.pipeline.analyze() 直接串联 framing.infer_model、framing.decode_stream、fields.infer_fields；repair=True 时额外调用 repair。
+- equivalence.py 是单独的分析入口；evidence.py、integrity.py、reliability.py、drift.py 也有各自的数据结构/API，并未全部由 pipeline.analyze 自动执行。
+- joint_crc.py 与 robust_crc.py 是独立推断策略；robust_crc 还依赖可选 NumPy。它们不能仅凭位于同一包内就被视为默认 pipeline 的实际算法路径。
+- 因此 V0.2.9 是一组相关研究组件和有限集成 pipeline，不是完整集成的证据推断平台。
+
+### 工程后果
+1. 迁移计划必须分别记录“代码存在”“有独立测试”“被主 pipeline 调用”“在真实数据上验证”四种状态。
+2. 每个策略插件要有明确输入/输出 contract 和 capability declaration。
+3. 主 pipeline 只调用已通过 contract test 的插件。
+4. 报告必须显示本次 run 实际执行的策略列表和版本，不能把未执行模块列作本次分析能力。
