@@ -69,3 +69,24 @@ See docs/V0.2.7_REPORT.md. Boundary absence is negative evidence only inside
 complete declared coverage when complete=True; incomplete detectors leave missing positions unknown. Provenance groups are user-declared; statistical
 independence and source authenticity are not proven. Synthetic demonstration
 only; no real-device validation.
+
+
+## V0.2.8 — calibrated evidence and active abstention
+
+Adds labelled source-reliability calibration, sensitivity/specificity Wilson
+bounds with Bonferroni adjustment, likelihood-ratio fusion, environment
+matching, pairwise error-dependence auditing (required by default), and an
+explicit support / reject / abstain decision. It can convert V0.2.7 audit rows
+with observations_from_audit.
+
+    python -m pip install -e '.[robust]'
+    python -m unittest discover -s tests -v
+    python experiments/reliability_benchmark.py
+
+See docs/V0.2.8_REPORT.md and experiments/v028_reliability_benchmark.json.
+Calibration and evaluation IDs must differ. Environment IDs must match. One
+usable observation per declared provenance group is allowed. Pairwise
+dependence checks are approximate; no detected correlation is not proof of
+independence. Disabling the gate is only for controlled ablation. Hidden drift
+under a reused environment ID remains unresolved. Synthetic validation only;
+no real-device validation or integrity proof.
