@@ -206,5 +206,9 @@
       ],
       "cluster_metrics": {}
     }
-  ]
+  ],
+  "calibration_profiles": [],
+  "dependence_audits": [],
+  "drift_assessments": [],
+  "repair_hypotheses": []
 }
