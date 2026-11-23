@@ -31,7 +31,6 @@ def _unique_ids(rows: list[dict[str, Any]], key: str, label: str, errors: list[s
 
 def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
     errors: list[str] = []
-    ids: dict[str, set[str]] = {}
     keys = {
         "captures": "capture_id",
         "sources": "source_id",
@@ -51,14 +50,25 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
         "repair_hypotheses": "repair_id",
         "validation_results": "validation_id",
     }
-    for collection, key in keys.items():
-        ids[collection] = _unique_ids(bundle.get(collection, []), key, collection, errors)
-
+    ids: dict[str, set[str]] = {
+        collection: _unique_ids(bundle.get(collection, []), key, collection, errors)
+        for collection, key in keys.items()
+    }
     all_ids = set().union(*ids.values()) if ids else set()
+
+    # IDs are globally unique across entity types, not merely within each array.
+    owners: dict[str, str] = {}
+    for collection, key in keys.items():
+        for row in bundle.get(collection, []):
+            value = row.get(key)
+            if isinstance(value, str) and value:
+                previous = owners.get(value)
+                if previous is not None and previous != collection:
+                    errors.append(f"ID {value} is reused by {previous} and {collection}")
+                owners[value] = collection
+
     captures = {x["capture_id"]: x for x in bundle.get("captures", [])}
-    flows = {x["flow_id"]: x for x in bundle.get("flows", [])}
-    sessions = {x["session_id"]: x for x in bundle.get("sessions", [])}
-    families = {x["message_family_id"]: x for x in bundle.get("message_families", [])}
+    evidence_ids = ids["evidence"]
 
     for source in bundle.get("sources", []):
         ref = source.get("capture_id")
@@ -81,8 +91,7 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
         if message.get("flow_id") not in ids["flows"]:
             errors.append(f"message {mid} references unknown flow")
         content_ref = message.get("content_ref", {})
-        capture_id = content_ref.get("capture_id")
-        capture = captures.get(capture_id)
+        capture = captures.get(content_ref.get("capture_id"))
         if capture is None:
             errors.append(f"message {mid} references unknown content capture")
         else:
@@ -92,18 +101,20 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
                 errors.append(f"message {mid} content_ref exceeds capture size")
         if message.get("byte_length") != content_ref.get("byte_length"):
             errors.append(f"message {mid} byte_length differs from content_ref")
+        for ref in message.get("frame_hypothesis_ids", []):
+            if ref not in ids["frame_hypotheses"]:
+                errors.append(f"message {mid} references unknown frame hypothesis {ref}")
 
     for family in bundle.get("message_families", []):
         for ref in family.get("member_message_ids", []):
             if ref not in ids["messages"]:
                 errors.append(f"message family {family.get('message_family_id')} references unknown message {ref}")
 
-    evidence_ids = ids["evidence"]
-    for evidence in bundle.get("evidence", []):
-        if evidence.get("source_id") not in ids["sources"]:
-            errors.append(f"evidence {evidence.get('evidence_id')} references unknown source")
-        if evidence.get("target_ref") not in all_ids:
-            errors.append(f"evidence {evidence.get('evidence_id')} references unknown target")
+    for item in bundle.get("evidence", []):
+        if item.get("source_id") not in ids["sources"]:
+            errors.append(f"evidence {item.get('evidence_id')} references unknown source")
+        if item.get("target_ref") not in all_ids:
+            errors.append(f"evidence {item.get('evidence_id')} references unknown target")
 
     for collection in ("frame_hypotheses", "field_hypotheses", "relation_hypotheses"):
         for hypothesis in bundle.get(collection, []):
@@ -115,6 +126,10 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
             for ref in hypothesis.get("alternative_ids", []):
                 if ref not in all_ids:
                     errors.append(f"hypothesis {hid} references unknown alternative {ref}")
+            if collection == "relation_hypotheses":
+                for ref in hypothesis.get("operand_ids", []):
+                    if ref not in ids["field_hypotheses"]:
+                        errors.append(f"relation hypothesis {hid} references unknown field operand {ref}")
 
     for frame in bundle.get("frame_hypotheses", []):
         if frame.get("scope_ref") not in all_ids:
@@ -129,34 +144,53 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
             errors.append(f"semantic hypothesis {semantic.get('hypothesis_id')} references unknown field")
         for ref in semantic.get("evidence_ids", []):
             if ref not in evidence_ids:
-                errors.append(f"semantic hypothesis {semantic.get('hypothesis_id')} references unknown evidence")
+                errors.append(f"semantic hypothesis {semantic.get('hypothesis_id')} references unknown evidence {ref}")
 
     for model in bundle.get("state_models", []):
         if model.get("message_family_ref") not in ids["message_families"]:
             errors.append(f"state model {model.get('state_model_id')} references unknown message family")
         state_ids = {x.get("state_id") for x in model.get("states", [])}
-        if model.get("initial_state_id") is not None and model["initial_state_id"] not in state_ids:
+        if model.get("initial_state_id") not in state_ids:
             errors.append(f"state model {model.get('state_model_id')} has unknown initial state")
+        for ref in model.get("training_session_ids", []) + model.get("validation_session_ids", []):
+            if ref not in ids["sessions"]:
+                errors.append(f"state model {model.get('state_model_id')} references unknown session {ref}")
         for transition in model.get("transitions", []):
             if transition.get("from_state") not in state_ids or transition.get("to_state") not in state_ids:
                 errors.append(f"state model {model.get('state_model_id')} has transition to unknown state")
             for ref in transition.get("evidence_ids", []):
                 if ref not in evidence_ids:
-                    errors.append(f"state model {model.get('state_model_id')} transition references unknown evidence")
+                    errors.append(f"state model {model.get('state_model_id')} transition references unknown evidence {ref}")
 
+    profiles = {x["profile_id"]: x for x in bundle.get("calibration_profiles", [])}
     for profile in bundle.get("calibration_profiles", []):
         if profile.get("source_id") not in ids["sources"]:
             errors.append(f"calibration profile {profile.get('profile_id')} references unknown source")
+        positive = profile.get("true_positive", 0) + profile.get("false_negative", 0)
+        negative = profile.get("true_negative", 0) + profile.get("false_positive", 0)
+        minimum = profile.get("min_per_class", 1)
+        if profile.get("calibrated") and (positive < minimum or negative < minimum):
+            errors.append(f"calibration profile {profile.get('profile_id')} is marked calibrated below its sample minimum")
 
     for audit in bundle.get("dependence_audits", []):
         if audit.get("source_a") not in ids["sources"] or audit.get("source_b") not in ids["sources"]:
             errors.append(f"dependence audit {audit.get('audit_id')} references unknown source")
+        if audit.get("source_a") == audit.get("source_b"):
+            errors.append(f"dependence audit {audit.get('audit_id')} must compare two distinct sources")
 
     for drift in bundle.get("drift_assessments", []):
         if drift.get("source_id") not in ids["sources"]:
             errors.append(f"drift assessment {drift.get('assessment_id')} references unknown source")
-        if drift.get("calibration_profile_id") not in ids["calibration_profiles"]:
+        profile = profiles.get(drift.get("calibration_profile_id"))
+        if profile is None:
             errors.append(f"drift assessment {drift.get('assessment_id')} references unknown calibration profile")
+        else:
+            if profile.get("source_id") != drift.get("source_id"):
+                errors.append(f"drift assessment {drift.get('assessment_id')} source differs from calibration profile")
+            if profile.get("calibration_dataset_id") == drift.get("evaluation_dataset_id"):
+                errors.append(f"drift assessment {drift.get('assessment_id')} reuses calibration dataset for evaluation")
+            if profile.get("environment_id") != drift.get("environment_id") and drift.get("status") != "abstain":
+                errors.append(f"drift assessment {drift.get('assessment_id')} has environment mismatch without abstention")
 
     for repair in bundle.get("repair_hypotheses", []):
         if repair.get("original_message_id") not in ids["messages"]:
@@ -172,7 +206,8 @@ def cross_reference_errors(bundle: dict[str, Any]) -> list[str]:
             score = item.get("score", {})
             profile_id = score.get("calibration_profile_id")
             if profile_id is not None and profile_id not in ids["calibration_profiles"]:
-                errors.append(f"{collection} item {item.get('hypothesis_id', item.get('repair_id'))} references unknown calibration profile")
+                label = item.get("hypothesis_id", item.get("repair_id"))
+                errors.append(f"{collection} item {label} references unknown calibration profile")
 
     for result in bundle.get("validation_results", []):
         for ref in result.get("target_hypothesis_ids", []):
