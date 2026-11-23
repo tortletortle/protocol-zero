@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://protocol-zero.invalid/schemas/protocol-zero-evidence-v1.schema.json",
+  "$id": "urn:protocol-zero:evidence-bundle:1.0.0",
   "title": "PROTOCOL ZERO Evidence Bundle V1",
   "description": "Versioned evidence-first interchange contract. Hypotheses and inferred semantics are not ground truth.",
   "type": "object",
@@ -1485,7 +1485,8 @@
             "type": "string",
             "minLength": 1
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "time_alignment": {
           "type": [
@@ -1527,7 +1528,8 @@
         "unobserved_transition_semantics",
         "training_session_ids",
         "validation_session_ids",
-        "algorithm"
+        "algorithm",
+        "initial_state_id"
       ],
       "properties": {
         "state_model_id": {
@@ -1568,7 +1570,8 @@
                 "type": "boolean"
               }
             }
-          }
+          },
+          "minItems": 1
         },
         "transitions": {
           "type": "array",
@@ -1804,7 +1807,8 @@
             "type": "string",
             "minLength": 1
           },
-          "uniqueItems": true
+          "uniqueItems": true,
+          "minItems": 1
         },
         "discovery_method": {
           "type": "string",
