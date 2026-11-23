@@ -189,5 +189,19 @@
   "relation_hypotheses": [],
   "semantic_hypotheses": [],
   "state_models": [],
-  "validation_results": []
+  "validation_results": [],
+  "message_families": [
+    {
+      "message_family_id": "family-fixture-001",
+      "member_message_ids": [
+        "message-001"
+      ],
+      "discovery_method": "fixture-only",
+      "status": "candidate",
+      "direction_pattern": [
+        "unknown"
+      ],
+      "cluster_metrics": {}
+    }
+  ]
 }
